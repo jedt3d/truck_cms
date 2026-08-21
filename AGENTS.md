@@ -46,6 +46,42 @@ Do not implement features listed as out of scope in `docs/PRD.md`. A change to
 the primary user, product promise, included capabilities, or release gates
 requires an owner-approved PRD revision before implementation.
 
+## Project management during development
+
+Project management and implementation are one lifecycle, not two parallel jobs.
+Tracking preserves the reason for a change, its approved boundary, its current
+state, and the evidence needed for a human to review it. Update management
+artifacts when engineering state changes; do not create duplicate status reports
+or update the board for every commit.
+
+Use one authoritative artifact for each kind of information:
+
+| Information | Source of truth |
+|---|---|
+| Product promise, v0.1 scope, and requirements | `docs/PRD.md` |
+| Product reasoning and confirmed direction | `docs/PRODUCT_CONCEPT.md` |
+| Feature problem, scope, acceptance criteria, decisions, and open questions | GitHub issue |
+| Priority and current workflow state | GitHub Project 8 |
+| Implementation, review evidence, and discussion | Branch and pull request |
+| Current behavior and developer usage | Code, tests, and repository documentation |
+
+Keep management synchronized at these transition points:
+
+| Engineering event | Project-management action |
+|---|---|
+| Idea becomes approved work | Create or approve the issue, define acceptance criteria and non-goals, link affected PRD requirements, and add it to Project 8. |
+| Implementation starts | Move the item to the board's in-progress equivalent and create the issue-linked branch. |
+| New evidence changes scope or a product rule | Pause the affected work, record the fact, decision, assumption, or open question in the issue, update canonical product documentation when required, and obtain human approval before continuing. |
+| Implementation and verification finish | Open the linked PR, attach test and validation evidence, report documentation and release-note impact, and move the item to the board's review equivalent. |
+| Human requests changes | Keep the same issue, branch, and PR; implement the agreed feedback and refresh verification evidence. |
+| Human approves and merges | Merge through GitHub, close the linked issue, delete the branch, and move the item to the board's completed equivalent. |
+| Follow-up work is discovered | Create a separate issue instead of silently expanding the completed feature. |
+
+Do not mark a feature complete while code, tests, the issue, or affected
+documentation disagree. Record material accepted decisions and their rationale
+in the issue or pull request and synchronize durable decisions into the relevant
+repository document.
+
 ## Development workflow
 
 TruckCMS uses ticket-driven GitHub Flow. Every production change follows this
@@ -163,6 +199,7 @@ Work is ready for a human-reviewed pull request only when:
 - security, data, database, route, API, accessibility, and documentation
   effects have been considered where relevant;
 - documentation reflects changed public behavior or developer workflow;
+- the issue, code, tests, and affected documentation describe the same behavior;
 - the branch contains no unrelated changes or generated secrets; and
 - Codex has reviewed the final diff against `origin/main` and the pull request
   links its ticket, explains risks, and includes a concise verification record.

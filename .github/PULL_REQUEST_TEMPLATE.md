@@ -31,6 +31,17 @@ Project: [TruckCMS Project 8](https://github.com/users/jedt3d/projects/8)
 
 <!-- Identify security, data, migration, API, database, accessibility, or regression risk. -->
 
+## Knowledge synchronization
+
+- Material decisions and rationale:
+- Documentation impact:
+- Release-note impact:
+- Follow-up tickets:
+
+- [ ] The issue still reflects the implemented scope and acceptance criteria.
+- [ ] Code, tests, and affected documentation describe the same behavior.
+- [ ] New work discovered during implementation is captured separately.
+
 ## Author handoff
 
 - [ ] The branch was created from a current `main`.
