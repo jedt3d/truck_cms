@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+  <title id="title">TruckCMS Value Proposition Canvas</title>
+  <desc id="desc">A value proposition canvas matching TruckCMS products, pain relievers, and gain creators to the jobs, pains, and desired gains of Rails developers launching new content websites.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#5f755d" />
+    </marker>
+  </defs>
+  <style>
+    .canvas { fill: #f7f6f3; }
+    .map-panel { fill: #eef4ed; stroke: #cddbc9; stroke-width: 2; }
+    .profile-panel { fill: #ffffff; stroke: #dedbd4; stroke-width: 2; }
+    .fit-panel { fill: #253126; }
+    .eyebrow { font: 600 15px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; letter-spacing: 2px; fill: #78746d; }
+    .title { font: 650 40px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #20201e; }
+    .subtitle { font: 400 18px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #68655f; }
+    .column-title { font: 650 27px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #262522; }
+    .heading { font: 650 22px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #262522; }
+    .body { font: 400 18px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #45433f; }
+    .fit-title { font: 650 22px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #ffffff; }
+    .fit-text { font: 500 16px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #e8eee7; }
+    .bullet-map { fill: #587057; }
+    .bullet-profile { fill: #77736b; }
+    .arrow-line { stroke: #5f755d; stroke-width: 3; marker-end: url(#arrow); }
+    .label { font: 650 13px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; letter-spacing: 1.5px; fill: #346538; }
+    .label-bg { fill: #dce9da; }
+  </style>
+
+  <rect class="canvas" width="1800" height="1100" />
+
+  <text class="eyebrow" x="40" y="45">TRUCKCMS · INITIAL RAILS-DEVELOPER SEGMENT</text>
+  <text class="title" x="40" y="88">Value Proposition Canvas</text>
+  <text class="subtitle" x="1760" y="85" text-anchor="end">How the product creates fit for Rails teams launching content-driven websites</text>
+
+  <text class="column-title" x="40" y="138">Value map</text>
+  <rect class="label-bg" x="187" y="113" width="112" height="28" rx="14" />
+  <text class="label" x="243" y="132" text-anchor="middle">TRUCKCMS</text>
+  <text class="column-title" x="1040" y="138">Customer profile</text>
+  <rect class="label-bg" x="1260" y="113" width="170" height="28" rx="14" />
+  <text class="label" x="1345" y="132" text-anchor="middle">RAILS DEVELOPER</text>
+
+  <!-- Row 1 -->
+  <rect class="map-panel" x="40" y="160" width="720" height="270" rx="12" />
+  <text class="heading" x="68" y="202">Products and services</text>
+  <circle class="bullet-map" cx="72" cy="244" r="4" /><text class="body" x="88" y="250">Rails 8.1+ engine and new-site starter</text>
+  <circle class="bullet-map" cx="72" cy="282" r="4" /><text class="body" x="88" y="288">Active Record content-model registration</text>
+  <circle class="bullet-map" cx="72" cy="320" r="4" /><text class="body" x="88" y="326">Typed BlockStream and clean Hotwire administration</text>
+  <circle class="bullet-map" cx="72" cy="358" r="4" /><text class="body" x="88" y="364">Drafts, revisions, protected preview, and publishing</text>
+  <circle class="bullet-map" cx="72" cy="396" r="4" /><text class="body" x="88" y="402">Rails rendering plus versioned read-only REST delivery</text>
+
+  <rect class="fit-panel" x="790" y="220" width="220" height="150" rx="75" />
+  <text class="fit-title" x="900" y="268" text-anchor="middle">FIT</text>
+  <text class="fit-text" x="900" y="301" text-anchor="middle">Rails-native product</text>
+  <text class="fit-text" x="900" y="325" text-anchor="middle">for Rails-native jobs</text>
+  <line class="arrow-line" x1="760" y1="295" x2="790" y2="295" />
+  <line class="arrow-line" x1="1010" y1="295" x2="1040" y2="295" />
+
+  <rect class="profile-panel" x="1040" y="160" width="720" height="270" rx="12" />
+  <text class="heading" x="1068" y="202">Customer jobs</text>
+  <circle class="bullet-profile" cx="1072" cy="244" r="4" /><text class="body" x="1088" y="250">Launch a new content-driven Rails website</text>
+  <circle class="bullet-profile" cx="1072" cy="282" r="4" /><text class="body" x="1088" y="288">Define project-specific content with familiar models</text>
+  <circle class="bullet-profile" cx="1072" cy="320" r="4" /><text class="body" x="1088" y="326">Give non-developers a safe publishing workflow</text>
+  <circle class="bullet-profile" cx="1072" cy="358" r="4" /><text class="body" x="1088" y="364">Render content with Rails today</text>
+  <circle class="bullet-profile" cx="1072" cy="396" r="4" /><text class="body" x="1088" y="402">Serve Vue, React, mobile, or another client later</text>
+
+  <!-- Row 2 -->
+  <rect class="map-panel" x="40" y="450" width="720" height="270" rx="12" />
+  <text class="heading" x="68" y="492">Pain relievers</text>
+  <circle class="bullet-map" cx="72" cy="534" r="4" /><text class="body" x="88" y="540">Assembles Rails primitives into one editorial lifecycle</text>
+  <circle class="bullet-map" cx="72" cy="572" r="4" /><text class="body" x="88" y="578">Separates drafts from public delivery by default</text>
+  <circle class="bullet-map" cx="72" cy="610" r="4" /><text class="body" x="88" y="616">Keeps Rails routes authoritative and collisions explicit</text>
+  <circle class="bullet-map" cx="72" cy="648" r="4" /><text class="body" x="88" y="654">Uses one published revision for views and APIs</text>
+  <circle class="bullet-map" cx="72" cy="686" r="4" /><text class="body" x="88" y="692">Tests a portable core across three database families</text>
+
+  <rect class="fit-panel" x="790" y="510" width="220" height="150" rx="75" />
+  <text class="fit-title" x="900" y="558" text-anchor="middle">RELIEF</text>
+  <text class="fit-text" x="900" y="591" text-anchor="middle">Less custom CMS work</text>
+  <text class="fit-text" x="900" y="615" text-anchor="middle">and fewer split truths</text>
+  <line class="arrow-line" x1="760" y1="585" x2="790" y2="585" />
+  <line class="arrow-line" x1="1010" y1="585" x2="1040" y2="585" />
+
+  <rect class="profile-panel" x="1040" y="450" width="720" height="270" rx="12" />
+  <text class="heading" x="1068" y="492">Pains</text>
+  <circle class="bullet-profile" cx="1072" cy="534" r="4" /><text class="body" x="1088" y="540">Repeatedly building forms, uploads, preview, and publishing</text>
+  <circle class="bullet-profile" cx="1072" cy="572" r="4" /><text class="body" x="1088" y="578">Generic CRUD screens that confuse editors</text>
+  <circle class="bullet-profile" cx="1072" cy="610" r="4" /><text class="body" x="1088" y="616">Risk that drafts leak or preview differs from production</text>
+  <circle class="bullet-profile" cx="1072" cy="648" r="4" /><text class="body" x="1088" y="654">Rails pages and later APIs disagree about live content</text>
+  <circle class="bullet-profile" cx="1072" cy="686" r="4" /><text class="body" x="1088" y="692">Headless platforms add a separate operational context</text>
+
+  <!-- Row 3 -->
+  <rect class="map-panel" x="40" y="740" width="720" height="270" rx="12" />
+  <text class="heading" x="68" y="782">Gain creators</text>
+  <circle class="bullet-map" cx="72" cy="824" r="4" /><text class="body" x="88" y="830">Structured blocks make flexible pages reusable</text>
+  <circle class="bullet-map" cx="72" cy="862" r="4" /><text class="body" x="88" y="868">Active Record models preserve project meaning and control</text>
+  <circle class="bullet-map" cx="72" cy="900" r="4" /><text class="body" x="88" y="906">Rails and API delivery defer the frontend decision</text>
+  <circle class="bullet-map" cx="72" cy="938" r="4" /><text class="body" x="88" y="944">Replaceable templates and tokens support future branding</text>
+  <circle class="bullet-map" cx="72" cy="976" r="4" /><text class="body" x="88" y="982">Engine boundaries create a path to existing apps later</text>
+
+  <rect class="fit-panel" x="790" y="800" width="220" height="150" rx="75" />
+  <text class="fit-title" x="900" y="848" text-anchor="middle">GAINS</text>
+  <text class="fit-text" x="900" y="881" text-anchor="middle">Editorial independence</text>
+  <text class="fit-text" x="900" y="905" text-anchor="middle">without leaving Rails</text>
+  <line class="arrow-line" x1="760" y1="875" x2="790" y2="875" />
+  <line class="arrow-line" x1="1010" y1="875" x2="1040" y2="875" />
+
+  <rect class="profile-panel" x="1040" y="740" width="720" height="270" rx="12" />
+  <text class="heading" x="1068" y="782">Desired gains</text>
+  <circle class="bullet-profile" cx="1072" cy="824" r="4" /><text class="body" x="1088" y="830">Reach a useful editorial website sooner</text>
+  <circle class="bullet-profile" cx="1072" cy="862" r="4" /><text class="body" x="1088" y="868">Keep the application understandable to Rails developers</text>
+  <circle class="bullet-profile" cx="1072" cy="900" r="4" /><text class="body" x="1088" y="906">Let editors publish routine changes independently</text>
+  <circle class="bullet-profile" cx="1072" cy="938" r="4" /><text class="body" x="1088" y="944">Retain content when presentation technology changes</text>
+  <circle class="bullet-profile" cx="1072" cy="976" r="4" /><text class="body" x="1088" y="982">Avoid unnecessary platform and database lock-in</text>
+
+  <text class="subtitle" x="40" y="1065">Initial segment: Rails developers and teams launching new content-driven websites · Validate through the v0.1 starter and pilot users.</text>
+</svg>
