@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title desc">
+  <title id="title">TruckCMS Business Model Canvas</title>
+  <desc id="desc">A nine-part business model canvas describing TruckCMS partners, activities, resources, value propositions, customer relationships, channels, customer segments, costs, and potential revenue streams. Licensing and revenue remain hypotheses.</desc>
+  <style>
+    .canvas { fill: #f7f6f3; }
+    .panel { fill: #ffffff; stroke: #dedbd4; stroke-width: 2; }
+    .panel-accent { fill: #eef4ed; stroke: #cddbc9; stroke-width: 2; }
+    .panel-hypothesis { fill: #fbf3db; stroke: #d8bf79; stroke-width: 2; stroke-dasharray: 9 7; }
+    .eyebrow { font: 600 15px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; letter-spacing: 2px; fill: #78746d; }
+    .title { font: 650 40px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #20201e; }
+    .subtitle { font: 400 18px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #68655f; }
+    .heading { font: 650 23px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #262522; }
+    .body { font: 400 18px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #45433f; }
+    .note { font: 500 15px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; fill: #7d6322; }
+    .tag { font: 650 13px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; letter-spacing: 1.4px; fill: #346538; }
+    .tag-bg { fill: #edf3ec; }
+    .tag-hypothesis { font: 650 13px -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; letter-spacing: 1.4px; fill: #896216; }
+    .tag-hypothesis-bg { fill: #f5e7bd; }
+    .bullet { fill: #77736b; }
+  </style>
+
+  <rect class="canvas" width="1800" height="1200" />
+
+  <text class="eyebrow" x="40" y="45">TRUCKCMS · WORKING BUSINESS MODEL</text>
+  <text class="title" x="40" y="88">Business Model Canvas</text>
+  <text class="subtitle" x="1760" y="85" text-anchor="end">Confirmed product direction with commercial hypotheses clearly marked</text>
+
+  <!-- Key partners -->
+  <rect class="panel" x="40" y="125" width="320" height="650" rx="10" />
+  <text class="heading" x="64" y="165">Key partners</text>
+  <rect class="tag-bg" x="64" y="184" width="102" height="28" rx="14" />
+  <text class="tag" x="115" y="203" text-anchor="middle">DIRECTION</text>
+  <circle class="bullet" cx="68" cy="250" r="4" /><text class="body" x="84" y="256">Rails ecosystem and</text><text class="body" x="84" y="280">maintainers</text>
+  <circle class="bullet" cx="68" cy="326" r="4" /><text class="body" x="84" y="332">RubyGems and GitHub</text><text class="body" x="84" y="356">distribution</text>
+  <circle class="bullet" cx="68" cy="402" r="4" /><text class="body" x="84" y="408">Database and storage</text><text class="body" x="84" y="432">providers</text>
+  <circle class="bullet" cx="68" cy="478" r="4" /><text class="body" x="84" y="484">Rails agencies and early</text><text class="body" x="84" y="508">adopter teams</text>
+  <circle class="bullet" cx="68" cy="554" r="4" /><text class="body" x="84" y="560">Future Shopify, Spree,</text><text class="body" x="84" y="584">and Solidus adapters</text>
+  <text class="note" x="64" y="730">Partnership commitments are</text><text class="note" x="64" y="751">not yet established.</text>
+
+  <!-- Key activities -->
+  <rect class="panel" x="380" y="125" width="320" height="310" rx="10" />
+  <text class="heading" x="404" y="165">Key activities</text>
+  <circle class="bullet" cx="408" cy="211" r="4" /><text class="body" x="424" y="217">Engine and starter</text><text class="body" x="424" y="241">development</text>
+  <circle class="bullet" cx="408" cy="279" r="4" /><text class="body" x="424" y="285">Editorial UX and</text><text class="body" x="424" y="309">accessibility</text>
+  <circle class="bullet" cx="408" cy="347" r="4" /><text class="body" x="424" y="353">Rails and database</text><text class="body" x="424" y="377">compatibility testing</text>
+  <circle class="bullet" cx="408" cy="407" r="4" /><text class="body" x="424" y="413">Documentation and support</text>
+
+  <!-- Key resources -->
+  <rect class="panel" x="380" y="455" width="320" height="320" rx="10" />
+  <text class="heading" x="404" y="495">Key resources</text>
+  <circle class="bullet" cx="408" cy="541" r="4" /><text class="body" x="424" y="547">TruckCMS Rails engine</text>
+  <circle class="bullet" cx="408" cy="589" r="4" /><text class="body" x="424" y="595">Content registration and</text><text class="body" x="424" y="619">BlockStream contracts</text>
+  <circle class="bullet" cx="408" cy="657" r="4" /><text class="body" x="424" y="663">Administration design</text><text class="body" x="424" y="687">system and starter</text>
+  <circle class="bullet" cx="408" cy="725" r="4" /><text class="body" x="424" y="731">Documentation, tests, and</text><text class="body" x="424" y="755">community trust</text>
+
+  <!-- Value propositions -->
+  <rect class="panel-accent" x="720" y="125" width="360" height="650" rx="10" />
+  <text class="heading" x="744" y="165">Value propositions</text>
+  <rect class="tag-bg" x="744" y="184" width="111" height="28" rx="14" />
+  <text class="tag" x="799" y="203" text-anchor="middle">CONFIRMED</text>
+  <text class="body" x="744" y="253">Professional editorial content</text><text class="body" x="744" y="277">management, native to Rails.</text>
+  <circle class="bullet" cx="748" cy="325" r="4" /><text class="body" x="764" y="331">Developer-defined Active</text><text class="body" x="764" y="355">Record content models</text>
+  <circle class="bullet" cx="748" cy="401" r="4" /><text class="body" x="764" y="407">Structured pages with typed,</text><text class="body" x="764" y="431">validated content blocks</text>
+  <circle class="bullet" cx="748" cy="477" r="4" /><text class="body" x="764" y="483">Draft, preview, revision,</text><text class="body" x="764" y="507">publish workflow</text>
+  <circle class="bullet" cx="748" cy="553" r="4" /><text class="body" x="764" y="559">One published revision for</text><text class="body" x="764" y="583">Rails views and REST clients</text>
+  <circle class="bullet" cx="748" cy="629" r="4" /><text class="body" x="764" y="635">Rails conventions, database</text><text class="body" x="764" y="659">choice, frontend flexibility</text>
+  <text class="note" x="744" y="723">Rails first, not Rails only.</text>
+
+  <!-- Customer relationships -->
+  <rect class="panel" x="1100" y="125" width="320" height="310" rx="10" />
+  <text class="heading" x="1124" y="165">Customer relationships</text>
+  <circle class="bullet" cx="1128" cy="213" r="4" /><text class="body" x="1144" y="219">Documentation-led</text><text class="body" x="1144" y="243">self-service</text>
+  <circle class="bullet" cx="1128" cy="281" r="4" /><text class="body" x="1144" y="287">Transparent roadmap and</text><text class="body" x="1144" y="311">compatibility policy</text>
+  <circle class="bullet" cx="1128" cy="349" r="4" /><text class="body" x="1144" y="355">Community issue and</text><text class="body" x="1144" y="379">contribution workflow</text>
+  <circle class="bullet" cx="1128" cy="411" r="4" /><text class="body" x="1144" y="417">Future paid support</text>
+
+  <!-- Channels -->
+  <rect class="panel" x="1100" y="455" width="320" height="320" rx="10" />
+  <text class="heading" x="1124" y="495">Channels</text>
+  <circle class="bullet" cx="1128" cy="541" r="4" /><text class="body" x="1144" y="547">TruckCMS website built</text><text class="body" x="1144" y="571">with TruckCMS</text>
+  <circle class="bullet" cx="1128" cy="609" r="4" /><text class="body" x="1144" y="615">GitHub and RubyGems</text>
+  <circle class="bullet" cx="1128" cy="657" r="4" /><text class="body" x="1144" y="663">Rails community content,</text><text class="body" x="1144" y="687">examples, and talks</text>
+  <circle class="bullet" cx="1128" cy="725" r="4" /><text class="body" x="1144" y="731">Rails agencies and</text><text class="body" x="1144" y="755">implementation partners</text>
+
+  <!-- Customer segments -->
+  <rect class="panel" x="1440" y="125" width="320" height="650" rx="10" />
+  <text class="heading" x="1464" y="165">Customer segments</text>
+  <rect class="tag-bg" x="1464" y="184" width="111" height="28" rx="14" />
+  <text class="tag" x="1519" y="203" text-anchor="middle">CONFIRMED</text>
+  <text class="body" x="1464" y="253">Primary v0.1</text>
+  <circle class="bullet" cx="1468" cy="291" r="4" /><text class="body" x="1484" y="297">Rails developers and teams</text><text class="body" x="1484" y="321">launching new content sites</text>
+  <circle class="bullet" cx="1468" cy="367" r="4" /><text class="body" x="1484" y="373">Technical founders and</text><text class="body" x="1484" y="397">Rails agencies</text>
+  <text class="body" x="1464" y="449">Daily users</text>
+  <circle class="bullet" cx="1468" cy="487" r="4" /><text class="body" x="1484" y="493">Website administrators</text><text class="body" x="1484" y="517">and content editors</text>
+  <text class="body" x="1464" y="569">Phase two</text>
+  <circle class="bullet" cx="1468" cy="607" r="4" /><text class="body" x="1484" y="613">Existing Rails 8.1+</text><text class="body" x="1484" y="637">applications</text>
+  <text class="body" x="1464" y="689">Secondary</text>
+  <circle class="bullet" cx="1468" cy="727" r="4" /><text class="body" x="1484" y="733">API client developers</text>
+
+  <!-- Cost structure -->
+  <rect class="panel" x="40" y="795" width="850" height="330" rx="10" />
+  <text class="heading" x="64" y="835">Cost structure</text>
+  <circle class="bullet" cx="68" cy="883" r="4" /><text class="body" x="84" y="889">Core engineering, review, and long-term maintenance</text>
+  <circle class="bullet" cx="68" cy="931" r="4" /><text class="body" x="84" y="937">Multi-database and multi-version CI infrastructure</text>
+  <circle class="bullet" cx="68" cy="979" r="4" /><text class="body" x="84" y="985">Security response, compatibility work, and release operations</text>
+  <circle class="bullet" cx="68" cy="1027" r="4" /><text class="body" x="84" y="1033">Editorial UX, accessibility, documentation, examples, and support</text>
+  <circle class="bullet" cx="68" cy="1075" r="4" /><text class="body" x="84" y="1081">Brand, website, community education, and adoption programs</text>
+
+  <!-- Revenue streams -->
+  <rect class="panel-hypothesis" x="910" y="795" width="850" height="330" rx="10" />
+  <text class="heading" x="934" y="835">Revenue streams</text>
+  <rect class="tag-hypothesis-bg" x="1124" y="812" width="124" height="28" rx="14" />
+  <text class="tag-hypothesis" x="1186" y="831" text-anchor="middle">HYPOTHESIS</text>
+  <circle class="bullet" cx="938" cy="883" r="4" /><text class="body" x="954" y="889">Open-source core with commercial support</text>
+  <circle class="bullet" cx="938" cy="931" r="4" /><text class="body" x="954" y="937">Managed hosting or operational service</text>
+  <circle class="bullet" cx="938" cy="979" r="4" /><text class="body" x="954" y="985">Premium integrations, blocks, or enterprise capabilities</text>
+  <circle class="bullet" cx="938" cy="1027" r="4" /><text class="body" x="954" y="1033">Agency enablement, migration, and implementation services</text>
+  <text class="note" x="934" y="1084">Licensing, pricing, and monetization are unresolved and require validation.</text>
+
+  <text class="subtitle" x="40" y="1170">Product direction as of 2026-08-21 · Commercial sections are hypotheses, not commitments.</text>
+</svg>
