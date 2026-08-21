@@ -8,22 +8,25 @@ review requirements in this file.
 
 ## Project ownership
 
-- The project owner controls product decisions, acceptance criteria, pull
-  request creation, approval, and merge decisions.
+- The project owner controls product decisions, ticket approval, acceptance
+  criteria, pull request review, approval, and merge decisions.
 - GitHub Project 8 is the planning board for approved work:
   <https://github.com/users/jedt3d/projects/8>
-- Codex may analyze, plan, implement, test, document, and review work requested
-  by the owner.
-- Codex must not open or merge a pull request, push directly to `main`, change
-  Project 8, resolve review threads, or publish a GitHub review unless the owner
-  explicitly authorizes that specific remote action.
-- The owner creates pull requests. Codex prepares a pushed feature branch and a
-  proposed pull request title, description, and verification summary.
+- The human creates or approves the GitHub issue, reviews the completed pull
+  request, and decides whether it may merge.
+- Codex is the implementer. For an approved, assigned ticket, Codex may analyze,
+  plan, implement, test, document, commit, push the ticket branch, and open or
+  update its pull request.
+- Codex must not approve its own work, merge a pull request, push directly to
+  `main`, force-push a shared branch, or weaken branch protection.
+- Codex may keep the assigned Project 8 item synchronized with the board's
+  existing workflow states. It must not create or rename project fields,
+  statuses, or automations unless the owner explicitly requests that change.
 
 ## Required product context
 
-Before reviewing a specification, planning a feature, changing behavior, or
-reviewing a pull request, read these files in order:
+Before reviewing a specification, planning a feature, or changing behavior,
+read these files in order:
 
 1. [`docs/PRD.md`](docs/PRD.md) — the mandatory v0.1 execution baseline.
 2. [`docs/PRODUCT_CONCEPT.md`](docs/PRODUCT_CONCEPT.md) — product rationale,
@@ -45,29 +48,42 @@ requires an owner-approved PRD revision before implementation.
 
 ## Development workflow
 
-1. Identify the approved Project 8 item or owner request and its acceptance
-   criteria. Do not enlarge the task silently.
-2. Read the required product context and map the work to applicable PRD
-   requirements and launch gates.
-3. Inspect the relevant source, configuration, tests, logs, and nearby code.
-   Diagnose the root cause before proposing or making a change.
-4. Post a short, auditable plan before multi-step work. Identify uncertainties
-   and decisions that require the owner.
-5. Start from the latest `origin/main` and create a focused branch named
-   `codex/<project-item-or-issue>-<short-slug>`. Never develop on `main`.
-6. Make the smallest complete change. Preserve existing architecture and user
-   work; do not mix refactors, dependency upgrades, or formatting unrelated to
-   the task.
-7. Add or update tests for changed behavior. Run the narrowest relevant checks
-   first, then the repository's required full checks. Discover commands from
-   repository configuration; do not invent commands or flags.
-8. Re-read the diff against `origin/main`. Check security, migrations,
-   compatibility, documentation, and accidental files before committing.
-9. Commit only task files in focused commits and push only the feature branch.
-   Report the commit, checks run, known limitations, and proposed PR text to
-   the owner.
-10. The owner opens the pull request, makes the final product decision, and
-    decides when to merge.
+TruckCMS uses ticket-driven GitHub Flow. Every production change follows this
+sequence:
+
+1. **Ticket:** The human creates or approves a GitHub issue, adds it to Project
+   8, and provides a clear problem, scope, acceptance criteria, and applicable
+   PRD requirement identifiers. Do not implement an unapproved draft item.
+2. **Start:** Codex reads the ticket and required product context, inspects the
+   relevant source, configuration, tests, logs, and nearby code, and maps the
+   work to affected requirements and launch gates. It diagnoses before changing
+   and posts a short plan for multi-step work.
+3. **Branch:** From the latest `origin/main`, Codex creates one short-lived
+   branch named `<type>/<issue-number>-<short-slug>`, where `type` is `feature`,
+   `fix`, `docs`, `test`, or `chore`. Never develop directly on `main`.
+4. **Implementation:** Codex makes the smallest complete change, adds or updates
+   tests and documentation, and keeps unrelated refactors, dependency upgrades,
+   formatting, and user work out of the branch.
+5. **Verification:** Codex runs the narrowest relevant checks first and then the
+   repository's required full checks. Commands must come from repository
+   configuration; do not invent commands or flags. Failures must be fixed or
+   reported explicitly.
+6. **Self-review:** Codex reviews the complete diff against `origin/main` for
+   acceptance coverage, correctness, security, migrations, database and API
+   compatibility, accessibility, documentation, and accidental files.
+7. **Pull request:** Codex commits only ticket files, pushes the ticket branch,
+   and opens a pull request linked with `Closes #<issue-number>`. The PR must
+   summarize the change, map affected PRD requirements, report verification,
+   identify risk, and contain no unrelated changes.
+8. **Human review:** A human reviews the pull request and CI evidence. Codex
+   addresses requested changes on the same branch, reruns affected checks, and
+   updates the PR. Codex never approves its own work.
+9. **Merge:** Only the human may approve and merge. Prefer squash merge unless
+   preserving the branch's individual commits has explicit value. Delete the
+   merged branch and move the Project 8 item to the board's completed state.
+
+Keep the ticket synchronized with the board's existing equivalents of ready,
+in progress, in review, and done. Do not assume or create exact status names.
 
 Until executable project tooling exists, documentation validation consists at
 minimum of reviewing rendered structure, checking relative links and assets,
@@ -109,32 +125,37 @@ When asked to review a specification:
 5. Do not edit an approved specification during a review unless the owner also
    asks for changes.
 
-## Pull request review
+## Human pull request review
 
-Codex reviews pull requests authored by the owner only when requested. For each
-review:
+A pull request is not complete when Codex finishes implementation. It is ready
+for human review only when the definition of done below is satisfied.
 
-1. Fetch the current base and head and inspect the complete diff against the
-   pull request base, not only the latest commit.
-2. Read the linked Project 8 item, pull request description, affected product
-   documents, implementation, tests, migrations, and configuration.
-3. Verify scope and acceptance criteria, then prioritize correctness, data
-   safety, authentication and authorization, draft isolation, revision parity,
-   route precedence, database portability, accessibility, and regression risk.
-4. Run relevant checks and distinguish observed failures from untested risk.
-5. Report actionable findings first, ordered as `blocking`, `major`, or `minor`,
-   using `path:line` references and explaining the user-visible or operational
-   consequence. Avoid style-only comments unless a repository rule requires
-   them.
-6. If there are no findings, state that explicitly and list residual risks or
-   checks that could not be run.
-7. Keep the review local unless the owner explicitly authorizes posting it to
-   GitHub. Posting comments, submitting a review, or resolving threads are
-   separate remote actions and require separate authorization.
+The human reviewer should compare the complete diff with the linked issue,
+acceptance criteria, affected PRD requirements, product boundaries, tests,
+migrations, configuration, and verification evidence. Review should prioritize
+correctness, data safety, authentication and authorization, draft isolation,
+revision parity, route precedence, database portability, accessibility, and
+regression risk.
+
+Human-requested changes remain part of the same ticket and pull request. Codex
+must inspect each current review thread, implement only the agreed changes,
+rerun relevant checks, and report what changed. The human reviewer re-reviews
+the updated diff and is the only party that may approve it.
+
+## Main branch policy
+
+- All changes to `main` arrive through pull requests linked to approved tickets.
+- Direct pushes, force pushes, and branch deletion are prohibited on `main`.
+- Require at least one human approval and resolution of review conversations.
+- Require repository CI checks once executable checks are available.
+- Stale approval should be re-evaluated after material changes to an approved
+  pull request.
+- Merge only when the branch is current enough to satisfy repository rules and
+  all required checks pass.
 
 ## Definition of done
 
-Work is ready for the owner to open a pull request only when:
+Work is ready for a human-reviewed pull request only when:
 
 - the approved acceptance criteria and affected PRD requirements are met;
 - tests cover the change and required checks pass, or limitations are clearly
@@ -143,5 +164,5 @@ Work is ready for the owner to open a pull request only when:
   effects have been considered where relevant;
 - documentation reflects changed public behavior or developer workflow;
 - the branch contains no unrelated changes or generated secrets; and
-- Codex has reviewed the final diff against `origin/main` and supplied a concise
-  pull request summary and verification record.
+- Codex has reviewed the final diff against `origin/main` and the pull request
+  links its ticket, explains risks, and includes a concise verification record.

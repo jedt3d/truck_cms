@@ -21,8 +21,8 @@ The v0.1 promise is:
   exclusions, launch gates, and delivery sequence.
 - [Product Concept](docs/PRODUCT_CONCEPT.md) — vision, audience, product
   rationale, confirmed decisions, and open strategic questions.
-- [Agent instructions](AGENTS.md) — the Codex development, specification-review,
-  and pull-request-review process.
+- [Agent instructions](AGENTS.md) — the ticket-driven implementation and human
+  pull-request-review process.
 
 Work is planned in
 [GitHub Project 8](https://github.com/users/jedt3d/projects/8).
@@ -46,17 +46,22 @@ from its mandatory requirements are not v0.1 work.
 
 ## GitHub development workflow
 
-1. The owner defines and approves work in Project 8 or an explicit task.
-2. Codex reads the PRD and product concept, inspects the repository, and works
-   on a focused `codex/...` branch.
-3. Codex implements, verifies, documents, commits, and pushes that feature
-   branch with a proposed pull request summary.
-4. The owner creates the pull request and retains approval and merge authority.
-5. On request, Codex reviews the owner-authored pull request against the linked
-   project item, product specifications, full diff, and test evidence.
+TruckCMS uses ticket-driven GitHub Flow:
 
-See [AGENTS.md](AGENTS.md) for the binding workflow, review criteria, product
-invariants, and definition of done.
+1. A human creates or approves a GitHub issue and adds it to Project 8 with
+   scope, acceptance criteria, and applicable PRD requirements.
+2. Codex creates an issue-linked branch from the latest `main`, implements the
+   ticket, adds tests and documentation, and runs the required checks.
+3. Codex self-reviews the full diff, pushes the branch, and opens a pull request
+   that closes the issue.
+4. A human reviews the pull request and CI evidence. Codex addresses requested
+   changes on the same branch.
+5. Only the human approves and merges into `main`; the merged branch is then
+   deleted and the project item is completed.
+
+Direct development and force pushes on `main` are prohibited. See
+[AGENTS.md](AGENTS.md) for branch naming, review criteria, product invariants,
+and the definition of done.
 
 ## License
 
